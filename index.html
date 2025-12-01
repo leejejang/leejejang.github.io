@@ -20,9 +20,7 @@
       --max-width: 960px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -37,9 +35,7 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     .container {
       max-width: var(--max-width);
@@ -61,11 +57,7 @@
       flex-wrap: wrap;
     }
 
-    .profile-photo {
-      flex: 0 0 140px;
-      display: flex;
-      justify-content: center;
-    }
+    .profile-photo { flex: 0 0 140px; display: flex; justify-content: center; }
 
     .profile-photo img {
       width: 140px;
@@ -75,32 +67,16 @@
       border: 2px solid var(--border);
     }
 
-    .header-text {
-      flex: 1 1 260px;
-      min-width: 0;
-    }
+    .header-text { flex: 1 1 260px; min-width: 0; }
 
     .header-text h1 {
-      font-size: 28px;
-      margin: 0 0 4px 0;
-      font-weight: 600;
+      font-size: 28px; margin: 0 0 4px 0; font-weight: 600;
     }
 
-    .header-title {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
+    .header-title { font-size: 15px; color: var(--muted); margin-bottom: 8px; }
+    .header-affiliation { font-size: 14px; color: var(--muted); }
 
-    .header-affiliation {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .header-links {
-      margin-top: 10px;
-      font-size: 14px;
-    }
+    .header-links { margin-top: 10px; font-size: 14px; }
 
     .header-links span {
       margin-right: 12px;
@@ -109,18 +85,13 @@
       gap: 6px;
     }
 
-    .header-links i {
-      font-size: 14px;
-      color: var(--muted);
-    }
+    .header-links i { font-size: 14px; color: var(--muted); }
 
     /* Navigation */
     .site-nav {
       background-color: var(--bg);
       border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 50;
+      position: sticky; top: 0; z-index: 50;
     }
 
     .nav-inner {
@@ -149,81 +120,34 @@
     }
 
     /* Main layout */
-    .main {
-      padding: 24px 0 40px 0;
-    }
+    .main { padding: 24px 0 40px 0; }
 
     .section {
       background-color: var(--bg);
       border-radius: 8px;
-      padding: 18px 18px 16px 18px;
+      padding: 18px;
       margin-bottom: 18px;
       border: 1px solid #f0f0f0;
     }
 
     .section h2 {
-      font-size: 18px;
-      margin: 0 0 10px 0;
-      font-weight: 600;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 6px;
-    }
-
-    .section p {
-      font-size: 14px;
-      margin: 4px 0;
+      font-size: 18px; margin: 0 0 10px 0; font-weight: 600;
+      border-bottom: 1px solid var(--border); padding-bottom: 6px;
     }
 
     .tagline {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 8px;
+      font-size: 14px; color: var(--muted); margin-top: 8px;
     }
 
-    .item {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
+    .item { margin-bottom: 10px; font-size: 14px; }
+    .item-title { font-weight: 500; }
+    .item-meta { font-size: 13px; color: var(--muted); margin-bottom: 3px; }
 
-    .item:last-child {
-      margin-bottom: 0;
-    }
+    .item-bullets { padding-left: 18px; }
+    .item-bullets li { margin-bottom: 2px; }
 
-    .item-title {
-      font-weight: 500;
-      margin-bottom: 1px;
-    }
-
-    .item-meta {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 3px;
-    }
-
-    .item-bullets {
-      margin: 3px 0;
-      padding-left: 18px;
-    }
-
-    .item-bullets li {
-      font-size: 14px;
-      margin-bottom: 2px;
-    }
-
-    .pub-title {
-      font-weight: 500;
-    }
-
-    .pub-venue {
-      font-style: italic;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
+    .pub-title { font-weight: 500; }
+    .pub-venue { font-style: italic; }
 
     .skills-list span {
       font-size: 13px;
@@ -231,27 +155,27 @@
       border-radius: 999px;
       background-color: var(--bg-alt);
       border: 1px solid var(--border);
+      margin-right: 6px;
+      margin-bottom: 6px;
+      display: inline-block;
     }
 
-    /* Small-screen tweaks */
-    @media (max-width: 640px) {
-      .header-inner {
-        align-items: flex-start;
-      }
-
-      .profile-photo {
-        flex: 0 0 110px;
-      }
-
-      .profile-photo img {
-        width: 110px;
-        height: 110px;
-      }
-
-      .header-text h1 {
-        font-size: 24px;
-      }
+    /* Scholar Button */
+    .scholar-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 12px;
+      background-color: var(--accent);
+      color: white;
+      font-size: 13px;
+      border-radius: 6px;
     }
+
+    .scholar-button:hover {
+      background-color: #165fcc;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 <body>
@@ -260,19 +184,22 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="profile-photo">
-        <!-- Replace IMG_8116.jpg with your actual image path if needed -->
         <img src="IMG_8116.jpg" alt="Photo of Leeje Jang">
       </div>
       <div class="header-text">
         <h1>Leeje Jang</h1>
-        <div class="header-title">Ph.D. Student, Computer Science</div>
+        <div class="header-title">Ph.D. Student in Computer Science</div>
         <div class="header-affiliation">
           University of Minnesota – Twin Cities<br>
           Knowledge Computing Lab (Advisor: Prof. Yao-Yi Chiang)
         </div>
+
         <div class="header-links">
           <span><i class="fa fa-envelope"></i><a href="mailto:jang0124@umn.edu">jang0124@umn.edu</a></span>
           <span><i class="fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/leeje-jang/" target="_blank">LinkedIn</a></span>
+          <span><i class="fa fa-graduation-cap"></i>
+            <a href="https://scholar.google.com/citations?user=sfbDLSMAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          </span>
           <span><i class="fa fa-globe"></i><a href="https://knowledge-computing.github.io/" target="_blank">Knowledge Computing Lab</a></span>
         </div>
       </div>
@@ -301,8 +228,8 @@
         <p>
           I am a Ph.D. student in Computer Science at the University of Minnesota, advised by
           Prof. Yao-Yi Chiang in the Knowledge Computing Lab. My research focuses on computer
-          vision, natural language processing, and multimodal learning, especially when models
-          operate on spatial and geospatial data.
+          vision, natural language processing, and multimodal learning, especially models grounded
+          in spatial and geospatial data.
         </p>
         <p class="tagline">
           I work on scene text spotting with pretrained language models, human-centered AI agents
@@ -315,13 +242,13 @@
         <h2>Research</h2>
 
         <div class="item">
-          <div class="item-title">Graduate Research Assistant, Knowledge Computing Lab</div>
-          <div class="item-meta">University of Minnesota · 2022 – Present · Advisor: Prof. Yao-Yi Chiang</div>
+          <div class="item-title">Graduate Research Assistant</div>
+          <div class="item-meta">Knowledge Computing Lab · 2022 – Present</div>
           <ul class="item-bullets">
-            <li>Integrate pretrained language models into end-to-end scene text spotters for robust multilingual text understanding.</li>
-            <li>Design vision–language pipelines for tooth-level diagnosis using multi-view smartphone images in collaboration with the School of Dentistry.</li>
-            <li>Develop human-centered AI agents that interpret street-view imagery for neighborhood assessment and spatial perception studies.</li>
-            <li>Collaborate with interdisciplinary teams across geography, dentistry, and geoscience on map digitization and geospatial AI projects.</li>
+            <li>Integrate PLMs into scene text spotters for multilingual text understanding.</li>
+            <li>Develop multimodal tooth-level diagnostic pipelines using smartphone images.</li>
+            <li>Create human-centered AI agents for neighborhood assessment from street-view imagery.</li>
+            <li>Work across geoscience, geography, and dentistry on interdisciplinary ML systems.</li>
           </ul>
         </div>
       </section>
@@ -330,62 +257,54 @@
       <section id="publications" class="section">
         <h2>Selected Publications</h2>
 
+        <a class="scholar-button" href="https://scholar.google.com/citations?user=sfbDLSMAAAAJ&hl=en" target="_blank">
+          View All Publications on Google Scholar
+        </a>
+
         <div class="item">
           <div class="pub-title">TiCLS: Tightly Coupled Language Text Spotting.</div>
           <div class="item-meta">
             L. Jang <em>et al.</em><br>
-            <span class="pub-venue">Winter Conference on Applications of Computer Vision (WACV), 2026.</span>
+            <span class="pub-venue">WACV 2026</span>
           </div>
         </div>
 
         <div class="item">
-          <div class="pub-title">StreetLens: Enabling Human-Centered AI Agents for Neighborhood Assessment from Street View Imagery.</div>
+          <div class="pub-title">StreetLens: Human-Centered AI Agents for Neighborhood Assessment.</div>
           <div class="item-meta">
             J. Kim, L. Jang <em>et al.</em><br>
-            <span class="pub-venue">ACM SIGSPATIAL Workshop on Human-Centered Geospatial Computing, 2025.</span>
+            <span class="pub-venue">ACM SIGSPATIAL 2025</span>
           </div>
         </div>
 
         <div class="item">
-          <div class="pub-title">DIGMAPPER: A Modular System for Automated Geologic Map Digitization.</div>
+          <div class="pub-title">DIGMAPPER: Automated Geologic Map Digitization.</div>
           <div class="item-meta">
-            W. Duan, M. P. Gerlek, S. N. Minton, C. A. Knoblock, F. Lin, T. Chen, L. Jang <em>et al.</em><br>
-            <span class="pub-venue">ACM International Conference on Advances in Geographic Information Systems, 2025.</span>
+            L. Jang <em>et al.</em><br>
+            <span class="pub-venue">ACM SIGSPATIAL 2025</span>
           </div>
         </div>
 
         <div class="item">
-          <div class="pub-title">Enabling Semantic-Rich Location Search on Street View Imagery Using Multilingual POI Data.</div>
+          <div class="pub-title">Semantic-Rich Location Search on Street View Imagery.</div>
           <div class="item-meta">
             L. Jang, Y.-Y. Chiang<br>
-            <span class="pub-venue">ACM SIGSPATIAL Workshop on Searching and Mining Large Collections of Geospatial Data, 2024.</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="pub-title">The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps.</div>
-          <div class="item-meta">
-            J. Kim, Z. Li, Y. Lin, M. Namgung, L. Jang <em>et al.</em><br>
-            <span class="pub-venue">ACM International Conference on Advances in Geographic Information Systems, 2023.</span>
+            <span class="pub-venue">ACM SIGSPATIAL 2024</span>
           </div>
         </div>
       </section>
 
       <!-- Service -->
       <section id="service" class="section">
-        <h2>Professional Service & Activities</h2>
-
-        <div class="item">
-          <div class="item-title">Academic & Community Service</div>
-          <ul class="item-bullets">
-            <li>Mentor, Honor Mentor Connection Program (Wayzata High School, 2025) – Guide a student project on traffic signboard detection using object detection models.</li>
-            <li>Co-organizer, ICDAR 2025 Competition on Historical Map Text Detection, Recognition, and Linking.</li>
-            <li>Workshop Organizer, UCGIS Symposium 2025 – “Capturing Human Perception of Neighborhoods using Online Data with Language and Vision Models”.</li>
-            <li>Recruitment Chair, Spatial Women (SpatialW), 2025.</li>
-            <li>Vice President, CS–ECE UMN Korean Association, 2025.</li>
-            <li>Poster Selection Committee Member, 32nd ACM SIGSPATIAL, 2024.</li>
-          </ul>
-        </div>
+        <h2>Service</h2>
+        <ul class="item-bullets">
+          <li>Mentor, Honor Mentor Connection Program (Wayzata High School), 2025.</li>
+          <li>Co-organizer, ICDAR 2025 Competition on Map Text Understanding.</li>
+          <li>Workshop Organizer, UCGIS 2025 Symposium.</li>
+          <li>Recruitment Chair, Spatial Women (SpatialW), 2025.</li>
+          <li>Vice President, CS–ECE UMN Korean Association, 2025.</li>
+          <li>Poster Committee, ACM SIGSPATIAL 2024.</li>
+        </ul>
       </section>
 
       <!-- Education -->
@@ -394,40 +313,31 @@
 
         <div class="item">
           <div class="item-title">Ph.D. in Computer Science</div>
-          <div class="item-meta">University of Minnesota, United States · 2022 – Present</div>
+          <div class="item-meta">University of Minnesota · 2022 – Present</div>
         </div>
 
         <div class="item">
-          <div class="item-title">B.S. in Computer Science &amp; Engineering</div>
-          <div class="item-meta">Ewha Womans University, Seoul, Korea · 2018 – 2022</div>
+          <div class="item-title">B.S. in Computer Science & Engineering</div>
+          <div class="item-meta">Ewha Womans University · 2018 – 2022</div>
         </div>
       </section>
 
       <!-- Skills -->
       <section id="skills" class="section">
-        <h2>Technical Skills</h2>
+        <h2>Skills</h2>
+
         <p class="item-title">Programming & Tools</p>
         <div class="skills-list">
-          <span>Python</span>
-          <span>C/C++</span>
-          <span>MATLAB</span>
-          <span>Git</span>
-          <span>Docker</span>
-          <span>CUDA</span>
-          <span>UNITY</span>
+          <span>Python</span><span>C/C++</span><span>MATLAB</span>
+          <span>Git</span><span>Docker</span><span>CUDA</span><span>UNITY</span>
         </div>
 
         <p class="item-title" style="margin-top: 10px;">Machine Learning & Domains</p>
         <div class="skills-list">
-          <span>PyTorch</span>
-          <span>TensorFlow</span>
-          <span>Computer Vision</span>
-          <span>Scene Text Spotting</span>
-          <span>Natural Language Processing</span>
-          <span>Multimodal Learning</span>
-          <span>Vision–Language Models</span>
-          <span>Generative AI</span>
-          <span>Spatial &amp; Geospatial Data</span>
+          <span>PyTorch</span><span>TensorFlow</span><span>Computer Vision</span>
+          <span>NLP</span><span>Scene Text Spotting</span><span>Multimodal Learning</span>
+          <span>Vision–Language Models</span><span>Generative AI</span>
+          <span>Geospatial AI</span>
         </div>
       </section>
 
