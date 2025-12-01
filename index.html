@@ -1,267 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-.bgimg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/Users/leejejang/website/IMG_8116.jpg');
-  min-height: 30%;
-}
-</style>
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <title>Leeje Jang | Computer Science, University of Minnesota</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-/* Header/logo Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background:  white;
-  color: black;
-}
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f7f7f9;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --accent: #1f6feb;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg-alt);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 18px;
+    }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
+    /* Header */
+    .site-header {
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0 18px 0;
+    }
 
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
 
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+    .profile-photo {
+      flex: 0 0 140px;
+      display: flex;
+      justify-content: center;
+    }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
+    .profile-photo img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
+    .header-text {
+      flex: 1 1 260px;
+      min-width: 0;
+    }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+    .header-text h1 {
+      font-size: 28px;
+      margin: 0 0 4px 0;
+      font-weight: 600;
+    }
+
+    .header-title {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .header-affiliation {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .header-links {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .header-links span {
+      margin-right: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-links i {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Navigation */
+    .site-nav {
+      background-color: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-inner {
+      display: flex;
+      gap: 20px;
+      padding: 10px 18px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Main layout */
+    .main {
+      padding: 24px 0 40px 0;
+    }
+
+    .section {
+      background-color: var(--bg);
+      border-radius: 8px;
+      padding: 18px 18px 16px 18px;
+      margin-bottom: 18px;
+      border: 1px solid #f0f0f0;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    .section p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .item {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-title {
+      font-weight: 500;
+      margin-bottom: 1px;
+    }
+
+    .item-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .item-bullets {
+      margin: 3px 0;
+      padding-left: 18px;
+    }
+
+    .item-bullets li {
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .pub-title {
+      font-weight: 500;
+    }
+
+    .pub-venue {
+      font-style: italic;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .skills-list span {
+      font-size: 13px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background-color: var(--bg-alt);
+      border: 1px solid var(--border);
+    }
+
+    /* Small-screen tweaks */
+    @media (max-width: 640px) {
+      .header-inner {
+        align-items: flex-start;
+      }
+
+      .profile-photo {
+        flex: 0 0 110px;
+      }
+
+      .profile-photo img {
+        width: 110px;
+        height: 110px;
+      }
+
+      .header-text h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="header">
-  <!-- <h1>Leeje Jang</h1> -->
-  <img src="IMG_8116.jpg" style="width:300px"  class="center">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="profile-photo">
+        <!-- Replace IMG_8116.jpg with your actual image path if needed -->
+        <img src="IMG_8116.jpg" alt="Photo of Leeje Jang">
+      </div>
+      <div class="header-text">
+        <h1>Leeje Jang</h1>
+        <div class="header-title">Ph.D. Student, Computer Science</div>
+        <div class="header-affiliation">
+          University of Minnesota – Twin Cities<br>
+          Knowledge Computing Lab (Advisor: Prof. Yao-Yi Chiang)
+        </div>
+        <div class="header-links">
+          <span><i class="fa fa-envelope"></i><a href="mailto:jang0124@umn.edu">jang0124@umn.edu</a></span>
+          <span><i class="fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/leeje-jang/" target="_blank">LinkedIn</a></span>
+          <span><i class="fa fa-globe"></i><a href="https://knowledge-computing.github.io/" target="_blank">Knowledge Computing Lab</a></span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <center><h2>Leeje Jang</h2>
-  <p>Ph.D student in University of Minnesota-Twin cities </p>
-  <p>Contact: jang0124@umn.edu |  <a href="https://www.linkedin.com/in/leeje-jang/">Linkedin URL</a> </p>
-  </center>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#research">Research</a>
+      <a class="nav-link" href="#publications">Publications</a>
+      <a class="nav-link" href="#service">Service</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#skills">Skills</a>
+    </div>
+  </nav>
 
+  <!-- Main content -->
+  <main class="main">
+    <div class="container">
 
-  
-</p>
-</div>
+      <!-- About -->
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p>
+          I am a Ph.D. student in Computer Science at the University of Minnesota, advised by
+          Prof. Yao-Yi Chiang in the Knowledge Computing Lab. My research focuses on computer
+          vision, natural language processing, and multimodal learning, especially when models
+          operate on spatial and geospatial data.
+        </p>
+        <p class="tagline">
+          I work on scene text spotting with pretrained language models, human-centered AI agents
+          for street-view analysis, and multimodal systems for dental diagnostics.
+        </p>
+      </section>
 
-<div class="navbar">
-<br></br> 
-  <!-- <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a> -->
-</div>
-<!-- <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:30%">
-  <div class="bgimg"></div>
- <h1> <b> Leeje Jang </b> <br></h1>
-  <h5><b> PhD student in University of Minnesota-Twin cities </b></h5>
+      <!-- Research -->
+      <section id="research" class="section">
+        <h2>Research</h2>
 
-</nav> -->
+        <div class="item">
+          <div class="item-title">Graduate Research Assistant, Knowledge Computing Lab</div>
+          <div class="item-meta">University of Minnesota · 2022 – Present · Advisor: Prof. Yao-Yi Chiang</div>
+          <ul class="item-bullets">
+            <li>Integrate pretrained language models into end-to-end scene text spotters for robust multilingual text understanding.</li>
+            <li>Design vision–language pipelines for tooth-level diagnosis using multi-view smartphone images in collaboration with the School of Dentistry.</li>
+            <li>Develop human-centered AI agents that interpret street-view imagery for neighborhood assessment and spatial perception studies.</li>
+            <li>Collaborate with interdisciplinary teams across geography, dentistry, and geoscience on map digitization and geospatial AI projects.</li>
+          </ul>
+        </div>
+      </section>
 
-<!-- <div class="row">
-  <div class="side">  
+      <!-- Publications -->
+      <section id="publications" class="section">
+        <h2>Selected Publications</h2>
 
-</div>
-  </div> -->
+        <div class="item">
+          <div class="pub-title">TiCLS: Tightly Coupled Language Text Spotting.</div>
+          <div class="item-meta">
+            L. Jang <em>et al.</em><br>
+            <span class="pub-venue">Winter Conference on Applications of Computer Vision (WACV), 2026.</span>
+          </div>
+        </div>
 
-  <div class="main">
-    <!-- <img src="/Users/leejejang/website/IMG_8116.jpg" style="width:300px"  class="center">
+        <div class="item">
+          <div class="pub-title">StreetLens: Enabling Human-Centered AI Agents for Neighborhood Assessment from Street View Imagery.</div>
+          <div class="item-meta">
+            J. Kim, L. Jang <em>et al.</em><br>
+            <span class="pub-venue">ACM SIGSPATIAL Workshop on Human-Centered Geospatial Computing, 2025.</span>
+          </div>
+        </div>
 
-    <center><h2>Leeje Jang</h2>
-    <p>Ph.D student in University of Minnesota-Twin cities </p>
-    <p>Contact: jang0124@umn.edu</p></center> -->
-    <h2>About Me</h2>
-    <hr>
-    <p> This is Leeje Jang,  and I'm a 2nd-year PhD student at Computer Science in University of Minnesota-Twin cities. I'm a member of <a href="https://knowledge-computing.github.io/"> Knowledge Computing Lab </a>  , advised by Prof. Yao-Yi Chiang.
-        My research focuses on Computer Vision with Machine Learning which enables real-time interaction between people and machines, especially in machine learning model based on Spatial data. </p> 
-       
+        <div class="item">
+          <div class="pub-title">DIGMAPPER: A Modular System for Automated Geologic Map Digitization.</div>
+          <div class="item-meta">
+            W. Duan, M. P. Gerlek, S. N. Minton, C. A. Knoblock, F. Lin, T. Chen, L. Jang <em>et al.</em><br>
+            <span class="pub-venue">ACM International Conference on Advances in Geographic Information Systems, 2025.</span>
+          </div>
+        </div>
 
-<br>
-    <h2>Education</h2>
-    <hr>
-    <b>B.S. in Computer Science & Engineering :</b><br>
-    <b>Ewha Womans University, Seoul, South Korea (2018.03-2022.08) </b><br>
-    - Major in Computer Science and Engineering <br><br>
-   
-    <b>Ph.D in Computer Science :</b><br>
-    <b> University of Minnesota-Twin Cities, United States (2022.09~) </b><br><br>   
+        <div class="item">
+          <div class="pub-title">Enabling Semantic-Rich Location Search on Street View Imagery Using Multilingual POI Data.</div>
+          <div class="item-meta">
+            L. Jang, Y.-Y. Chiang<br>
+            <span class="pub-venue">ACM SIGSPATIAL Workshop on Searching and Mining Large Collections of Geospatial Data, 2024.</span>
+          </div>
+        </div>
 
-<br>
-    <h2>Research Experience</h2>
-    <hr>
-    <b>Lab internship (2020.06-2021.06) - Undergraduate Intern</b><br>
-  Human Computer Interaction Lab in Ewha Womans University <br>
-  Advised by Prof. Uran Oh<br><br>
+        <div class="item">
+          <div class="pub-title">The mapKurator System: A Complete Pipeline for Extracting and Linking Text from Historical Maps.</div>
+          <div class="item-meta">
+            J. Kim, Z. Li, Y. Lin, M. Namgung, L. Jang <em>et al.</em><br>
+            <span class="pub-venue">ACM International Conference on Advances in Geographic Information Systems, 2023.</span>
+          </div>
+        </div>
+      </section>
 
-  <b> Researcher (2022.09~) - Ph.D Student </b><br>
-  Knowledge-Computing Lab in University of Minnesota-Twin Cities<br>
-  Advised by Prof. Yao-Yi Chiang <br>
+      <!-- Service -->
+      <section id="service" class="section">
+        <h2>Professional Service & Activities</h2>
 
-<br>
-<h2>Scholarship & Awards</h2>
-<b> - Graduation Project Contest  (2020.06-2021.06) | </b> Ewha Womans University - 3rd place <br>
-<b> - Academic Activity Support Scholarship(2021.06) | </b> Ewha Womans University <br>
-<b> - The 3rd Future Finance A.I Challenge (2021.08-2021.10) | </b>Financial Supervisory Service of Korea , Ewha Womans University and KB bank - 1st place <br>
-<b> - Travel Grants (2022.11)  | </b> ACM SIGSPATIAL 2022 <br> 
-<br>
-    
-<h2>Presentation</h2>
-<b> Jang, L.,Lin,Y., Chiang, Y.-Y. (March 2023) Automatic Language Detection on Historical Maps , AAG GeoAI and Deep Learning Symposium, Denver, US <br>
+        <div class="item">
+          <div class="item-title">Academic & Community Service</div>
+          <ul class="item-bullets">
+            <li>Mentor, Honor Mentor Connection Program (Wayzata High School, 2025) – Guide a student project on traffic signboard detection using object detection models.</li>
+            <li>Co-organizer, ICDAR 2025 Competition on Historical Map Text Detection, Recognition, and Linking.</li>
+            <li>Workshop Organizer, UCGIS Symposium 2025 – “Capturing Human Perception of Neighborhoods using Online Data with Language and Vision Models”.</li>
+            <li>Recruitment Chair, Spatial Women (SpatialW), 2025.</li>
+            <li>Vice President, CS–ECE UMN Korean Association, 2025.</li>
+            <li>Poster Selection Committee Member, 32nd ACM SIGSPATIAL, 2024.</li>
+          </ul>
+        </div>
+      </section>
 
-<h2>Volunteer</h2>
-  <b>- Student Volunteer</b> | ACM SIGSPATIAL 2022 <br>
-  <br>
-<h2>Skills & Interests </h2>
-<hr>
-<b>Programming</b><br>
--Python, C, (advanced) | Java (intermediate) | HTML,PHP, CSS,SQL(basic) <br>
-<b>Interests</b><br>
-- Computer Vision | Machine  Learning  | Natural Language Processing <br>
-<br>
-<h2><b>Work Experience - Artificial Intelligence</b></h2>
-<hr>
-<b>Artificial Intelligence Project 1 (2020.06~2021.06)</b> | Developer<br>
+      <!-- Education -->
+      <section id="education" class="section">
+        <h2>Education</h2>
 
-<b>[Graduation project] Real-time posture correction web: </b>3rd place on Graduation Project Contest <br>
-<br><b>Role:</b><br>
-<b> Computer Vision</b> <br> 
--Keypoint detection, Object detection Openpose model (python) <br>
--Fine tuning YOLOv3 model to solve the problem of real-time detection with Openpose <br>          
-<b>Data Science  </b> <br> 
--Data collection and preprocessing (python,YOLOMark,opencv) <br>
--Data augmentation (python,Keras,opencv) <br>
--Implement a posture detection algorithm through those model(python) <br>
-<b>Presenter of Final Graduate project presentation</b> <br>
-<br>
-<hr>
-<b>Artificial Intelligence Project 2 (2021.07)</b> | Developer<br>
+        <div class="item">
+          <div class="item-title">Ph.D. in Computer Science</div>
+          <div class="item-meta">University of Minnesota, United States · 2022 – Present</div>
+        </div>
 
-<b>[Silicon Valley Internship Program] A mobile app that measures the size of a user's ring size with image</b>
-<br><br><b>Role: </b><br>
-<b>Computer Vision </b><br>
-- Semantic segmentation approach with fine-tuning DeeplabV3 model (python,tensorflow,opencv) <br>
-<b>Data Science </b> <br>
-- Dataset  : Hand gesture data (Kaggle)<br>
-- Data preprocessing (python,opencv)<br>
-<b>Final presenter of the project</b><br><br>
-<hr>
-<b>Artificial Intelligence Project 3 (2021.08-2021.10)</b> | Developer<br>
+        <div class="item">
+          <div class="item-title">B.S. in Computer Science &amp; Engineering</div>
+          <div class="item-meta">Ewha Womans University, Seoul, Korea · 2018 – 2022</div>
+        </div>
+      </section>
 
-<b>[The 3rd Future Finance A.I. Challenge]  Real-time messenger phishing detection service : 1st place on the contest</b> <br>
-<!-- This is a <b><a href="https://youtu.be/h7lnYHRC2gA"> Presentation URL [starting from 18:05]</a></b><br> -->
-<br><b>Role: </b><br>
-<b>Natural Language Processing</b><br>
--Fine tuning KB-ALBERT model (python,transformer,pytorch,pandas ,mxnet) <br>
--Fine tuning KoBERT model (python,transformer,pytorch,pandas,mxnet,Scikit-learn)<br>
-<b>Data Science</b><br>
--Data collection and preprocessing (python, sentencepiece, huggingface tokenizer)<br>
--Back translation data augmentation (connecting to the translator through crawling.) (python,Selenium,BeautifulSoup) <br>
-<b>Final presenter of the project </b><br>
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <p class="item-title">Programming & Tools</p>
+        <div class="skills-list">
+          <span>Python</span>
+          <span>C/C++</span>
+          <span>MATLAB</span>
+          <span>Git</span>
+          <span>Docker</span>
+          <span>CUDA</span>
+          <span>UNITY</span>
+        </div>
 
-  </div>
-</div>
+        <p class="item-title" style="margin-top: 10px;">Machine Learning & Domains</p>
+        <div class="skills-list">
+          <span>PyTorch</span>
+          <span>TensorFlow</span>
+          <span>Computer Vision</span>
+          <span>Scene Text Spotting</span>
+          <span>Natural Language Processing</span>
+          <span>Multimodal Learning</span>
+          <span>Vision–Language Models</span>
+          <span>Generative AI</span>
+          <span>Spatial &amp; Geospatial Data</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
 
 </body>
 </html>
